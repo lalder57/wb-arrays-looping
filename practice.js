@@ -113,7 +113,9 @@ function countEvens() {
 
 function countdown() {
   let numbers = [];
-  // Code here
+  for (let i = 10; i > 0; i--) {
+    numbers.push(i);
+  }
 
   return numbers;
 }
@@ -128,7 +130,9 @@ function countdown() {
 
 function backwards(inputArray) {
   let newArray = [];
-  // Code here
+  for (let i = inputArray.length - 1; i >= 0; i--) {
+    newArray.push(i);
+  }
 
   return newArray;
 }
