@@ -131,7 +131,7 @@ function countdown() {
 function backwards(inputArray) {
   let newArray = [];
   for (let i = inputArray.length - 1; i >= 0; i--) {
-    newArray.push(i);
+    newArray.push(inputArray[i]);
   }
 
   return newArray;
@@ -146,7 +146,8 @@ function backwards(inputArray) {
 // findInArray([0,1,2,3], 4); -> false
 
 function findInArray(inputArray, value) {
-  // Code here
+ const valueFound = inputArray.includes(value)
+  
   return valueFound;
 }
 
@@ -160,7 +161,13 @@ function findInArray(inputArray, value) {
 
 function stopAtNegative(inputArray) {
   let newArray = [];
-  // Code here
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i] < 0) {
+      break;
+    } else {
+      newArray.push(inputArray[i]);
+    }
+  }
 
   return newArray;
 }
